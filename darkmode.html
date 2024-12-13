@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addon Basic Homework</title>
+
+    <style>
+        body{
+            background: rgb(209, 247, 209) ;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .text-content{
+            background-color: azure;
+            padding: 100px;
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+        .image-content{
+            background: green;
+            padding: 100px;
+        }
+        .button-color{
+            color: black;
+            background-color: white;
+            float:right;
+            padding: 5px;
+        }
+        h1{
+            text-align: center;
+            color: green;
+        }
+        h2{
+            text-align: center;
+        
+        }
+        p{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .mainimg{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
+            padding: 10px;
+            
+        }
+        .mainimg:hover{
+            filter:contrast(150%);
+            border-radius: 40px;
+            transform: scale(1.1);
+            transition: all 150ms ease-in-out ;
+        }
+
+        .gridImage{
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            
+        }
+
+        .gridImage img{
+            width: 200px;
+            height: 120px;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .orderButton{
+            padding: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        .orderButton:hover{
+            background: rgb(11, 71, 11);
+            color: white;
+        }
+        footer{
+            padding-left: 10px;
+            padding-top: 120px;
+        }
+        .origin{
+            text-align: right;
+            padding: 20px;
+            color: aliceblue;
+        }
+        .dark{
+            background-color: black;
+        }
+        .dark .text-content {
+            background-color: grey;
+            color: white;
+        }
+
+        .dark h1{
+            color: azure;
+        }
+        .dark .image-content{
+            background-color: rgb(72, 69, 69);
+        }
+
+       
+    </style>
+
+
+</head>
+
+
+  <body>
+    <div class="text-content">
+    <h1> Healthy 🏃‍♂️</h1> 
+    <h2>🍓 Smart Bite 🥦</h2>
+    <p>Delicious food for every mood</p>
+
+    <button class="orderButton">
+        order now
+    </button>
+    
+    
+
+    <footer>
+        Contact Line : @SmartEat
+  
+    </footer>
+    </div>
+
+    <div class="image-content">
+    <button class="button-color"> Change Theme</button>
+
+    <script>
+      function changeColor() {
+        let body = document.querySelector("body");
+
+       if (body.classList.contains("dark")){
+        body.classList.remove("dark");
+       }
+       else{
+        body.classList.add("dark");
+       }
+        
+    }
+      function orderNow(){
+            let name = prompt("What is your name?");
+            let email = prompt ("What is your email address?");
+
+            alert("Hi!"+" "+name+" Thank you for joining us 💖");
+        }
+
+
+    let themeButton = document.querySelector(".button-color");
+    themeButton.addEventListener("click", changeColor);
+
+    let orderNowButton = document.querySelector(".orderButton");
+    orderNowButton.addEventListener("click", orderNow);
+        
+    </script>
+
+    <a href="https://www.naturemade.com/blogs/health-articles/best-healthy-foods-to-eat" target="_blank">
+    <img class="mainimg"
+        src="https://www.naturemade.com/cdn/shop/articles/healthy-foods-to-eat_960x.jpg?v=1611988563"
+        alt=""
+        />
+    
+    <div class="gridImage">
+    <img
+        src="https://blog.myfitnesspal.com/wp-content/uploads/2017/12/Essential-Guide-to-Healthy-Eating-2.png.webp"
+        alt=""
+        />
+    <img
+        src="https://www.apwuhp.com/wp-content/uploads/Healthy-Living-616x361-1.jpg"
+        alt=""
+        />
+    <img
+        src="https://cdn.aarp.net/content/aarpe/en/home/caregiving/health/info-2018/healthy-meals/_jcr_content/root/container_main/container_body_main/container_image/articlecontentfragme/cfimage.coreimg.75.1320.jpeg/content/dam/aarp/health/caregiving/2018/03/1140-nutrients-food-loved-ones-caregiving.jpg"
+        alt=""
+        />
+    <img
+        src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_860/https://www.motherhoodchaitanya.com/wp-content/uploads/2023/07/310-1-1.jpg"
+        alt=""
+        />
+    </div>
+        
+    </a>
+        <div class = origin>
+            <strong>Coding by Fangycu</strong>
+        </div>
+    </div>
+
+</br>
+
+    
+    </body>
+</html>
